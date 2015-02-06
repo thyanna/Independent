@@ -1,0 +1,5 @@
+c:\users\chan\documents\visual studio 2013\Projects\Kitchen Aid\ClassLibrary1\bin\Debug\KitchenAidTool.dll
+c:\users\chan\documents\visual studio 2013\Projects\Kitchen Aid\ClassLibrary1\bin\Debug\KitchenAidTool.pdb
+c:\users\chan\documents\visual studio 2013\Projects\Kitchen Aid\ClassLibrary1\obj\Debug\KitchenAidTool.dll
+c:\users\chan\documents\visual studio 2013\Projects\Kitchen Aid\ClassLibrary1\obj\Debug\KitchenAidTool.pdb
+C:\Users\Chan\Documents\Visual Studio 2013\Projects\Kitchen Aid\ClassLibrary1\obj\Debug\KitchenAidTool.csprojResolveAssemblyReference.cache

@@ -1,0 +1,4 @@
+c:\users\chan\documents\visual studio 2013\Projects\Kitchen Aid\Kitchen Aid\bin\Debug\Kitchen Aid.exe.config
+c:\users\chan\documents\visual studio 2013\Projects\Kitchen Aid\Kitchen Aid\obj\Debug\Kitchen Aid.csprojResolveAssemblyReference.cache
+c:\users\chan\documents\visual studio 2013\Projects\Kitchen Aid\Kitchen Aid\obj\Debug\Kitchen_Aid.Properties.Resources.resources
+c:\users\chan\documents\visual studio 2013\Projects\Kitchen Aid\Kitchen Aid\obj\Debug\Kitchen Aid.csproj.GenerateResource.Cache
