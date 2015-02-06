@@ -18,6 +18,7 @@ namespace KitchenAidTool
             string query = "";
             int recipeType = 0; 
             List<string> executionList = new List<string>();
+            string RecipeID = "(SELECT RecipeID FROM RECIPE WHERE RecipeName = '" + recipe.getName() + "' ) )";
 
             if (recipe.CheckTextRecipe())
                 recipeType = 1; //recipe is a TextRecipe 
@@ -33,13 +34,13 @@ namespace KitchenAidTool
                     foreach (string ingredient in recipe.getIngredients())
                     {
                         query = "INSERT INTO Ingredients (IngredientDescription, RecipeID ) ";
-                        query = query + "VALUES ( '" + ingredient + "', (SELECT RecipeID FROM RECIPE WHERE RecipeName = '" + recipe.getName() + "' ) )";
+                        query = query + "VALUES ( '" + ingredient + "', " + RecipeID;
                         executionList.Add(query);
                     }
                     foreach (string material in recipe.getMaterials())
                     {
                         query = "INSERT INTO Materials (MaterialDescription, RecipeID ) ";
-                        query = query + "VALUES ( '" + material + "', (SELECT RecipeID FROM RECIPE WHERE RecipeName = '" + recipe.getName() + "' ) )";
+                        query = query + "VALUES ( '" + material + "', " + RecipeID;
                         executionList.Add(query);
                     }
                     if (recipeType == 1)
@@ -49,14 +50,14 @@ namespace KitchenAidTool
                             int index = 0;
 
                             query = "INSERT INTO Steps (StepDescription, StepIndex, RecipeID ) ";
-                            query = query + "VALUES( '" + step + "', " + index++ + ", ( SELECT RecipeID FROM RECIPE WHERE RecipeName = '" + recipe.getName() + "' ) )";
+                            query = query + "VALUES( '" + step + "', " + index++ + ", " + RecipeID;
                             executionList.Add(query);
                         }
                     }
                     else
                     {
                         query = "INSERT INTO Video (VideoPath, RecipeID ) ";
-                        query = query + "VALUES ( '" + recipe.getVideoPath() + "', (SELECT RecipeID FROM RECIPE WHERE RecipeName = '" + recipe.getName() + "' ) )";
+                        query = query + "VALUES ( '" + recipe.getVideoPath() + "', " + RecipeID; ;
                         executionList.Add(query);
                     }
 
@@ -80,9 +81,80 @@ namespace KitchenAidTool
         }
 
         public Boolean StoreEmergencyContact( string number )
-        { return true; }
+        {
+            Boolean success = false;
+            string query = "";
+            List<string> executionList = new List<string>();
+
+            query = "INSERT INTO EmergencyContact (ContactNumber) ";
+            query = query + "VALUES ( '" + number + "' ) ";
+            
+            using (SqlConnection sqlConn = new SqlConnection(GetConnectionString()))
+            using (SqlCommand cmd = new SqlCommand(query, sqlConn))
+            {
+                sqlConn.Open();
+                cmd.ExecuteNonQuery();
+                success = true;
+            }
+            return success; 
+        }
         public Boolean RemoveRecipe(string recipeName )
-        { return true; }
+        {
+            //Boolean success = false;
+            //string query = "";
+            //int recipeType = 0;
+            //List<string> executionList = new List<string>();
+
+            //string RecipeID = "(SELECT RecipeID FROM RECIPE WHERE RecipeName = '" + recipe.getName() + "' ) )";
+
+            //if (recipe.CheckTextRecipe())
+            //    recipeType = 1; //recipe is a TextRecipe 
+
+            ////Ensuring recipe doesn't already exist in database 
+            //if (!QueryForRecipe(recipe.getName()))
+            //{
+            //    //Adding Recipe
+            //    query = "INSERT INTO RECIPE (RecipeName, TextRecipe, RecipeTime) ";
+            //    query = query + "VALUES ( '" + recipe.getName() + "', " + recipeType.ToString() + ", " + recipe.getTime() + " ) ";
+            //    executionList.Add(query);
+
+            //    foreach (string ingredient in recipe.getIngredients())
+            //    {
+            //        query = "INSERT INTO Ingredients (IngredientDescription, RecipeID ) ";
+            //        query = query + "VALUES ( '" + ingredient + "', (SELECT RecipeID FROM RECIPE WHERE RecipeName = '" + recipe.getName() + "' ) )";
+            //        executionList.Add(query);
+            //    }
+            //    foreach (string material in recipe.getMaterials())
+            //    {
+            //        query = "INSERT INTO Materials (MaterialDescription, RecipeID ) ";
+            //        query = query + "VALUES ( '" + material + "', (SELECT RecipeID FROM RECIPE WHERE RecipeName = '" + recipe.getName() + "' ) )";
+            //        executionList.Add(query);
+            //    }
+            //    if (recipeType == 1)
+            //    {
+            //        foreach (string step in recipe.getSteps())
+            //        {
+            //            int index = 0;
+
+            //            query = "INSERT INTO Steps (StepDescription, StepIndex, RecipeID ) ";
+            //            query = query + "VALUES( '" + step + "', " + index++ + ", ( SELECT RecipeID FROM RECIPE WHERE RecipeName = '" + recipe.getName() + "' ) )";
+            //            executionList.Add(query);
+            //        }
+            //    }
+            //    else
+            //    {
+            //        query = "INSERT INTO Video (VideoPath, RecipeID ) ";
+            //        query = query + "VALUES ( '" + recipe.getVideoPath() + "', (SELECT RecipeID FROM RECIPE WHERE RecipeName = '" + recipe.getName() + "' ) )";
+            //        executionList.Add(query);
+            //    }
+
+            //    ExecuteStorage(executionList);
+            //    success = true;
+            //}
+
+            //return success;
+            return true;
+        }
 
         public Boolean QueryForRecipe(string recipeName)
         {
@@ -110,7 +182,47 @@ namespace KitchenAidTool
         }
 
         public Boolean QueryForEmergencyContact()
-        { return true; }
+        {
+            Boolean exist = false;
+
+            string query = "SELECT EmergencyContactID ";
+            query = query + "FROM EmergencyContact ";
+
+            using (SqlConnection sqlConn = new SqlConnection(GetConnectionString()))
+            using (SqlCommand cmd = new SqlCommand(query, sqlConn))
+            {
+                sqlConn.Open();
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+
+                if (dt.Rows.Count == 1)
+                    exist = true;
+                else
+                    exist = false;
+            }
+            return exist;
+        }
+
+        public string RetrieveEmergencyContact()
+        {
+            string temp = ""; 
+            string query = "SELECT * " + "FROM EmergencyContact ";
+
+            using (SqlConnection sqlConn = new SqlConnection(GetConnectionString()))
+            using (SqlCommand cmd = new SqlCommand(query, sqlConn))
+            {
+                sqlConn.Open();
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    temp = (row["ContactNumber"].ToString());
+                }
+
+            }
+            return temp;
+        }
 
         public List<string> RetrieveIngredients( string recipeName )
         {
@@ -212,8 +324,5 @@ namespace KitchenAidTool
             }
             return temp;
         }
-
-
-
     }
 }

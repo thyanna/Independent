@@ -46,7 +46,5 @@ namespace KitchenAidTool
         public List<string> RunIngredientCheck()
         { List<string> temp = new List<string>(); return temp; }
 
-   
-
     }
 }
