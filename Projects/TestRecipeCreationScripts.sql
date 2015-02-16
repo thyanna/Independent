@@ -9,9 +9,9 @@
 --SELECT *
 --FROM Recipe
 
---SELECT RecipeID
---FROM RECIPE
---WHERE RecipeName = 'Bacon'
+SELECT TextRecipe
+FROM RECIPE
+WHERE RecipeName = 'Smores'
 
 --SELECT MaterialDescription
 --FROM RECIPE JOIN Materials ON Recipe.RecipeID = Materials.RecipeID 

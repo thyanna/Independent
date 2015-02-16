@@ -12,6 +12,30 @@ namespace KitchenAidTool
 {
     public class DatabaseManager
     {
+        //Check for recipe existence must already be made 
+        public string CheckRecipeType( string recipeName)
+        {
+            string type = "";
+
+            string query = "SELECT TextRecipe ";
+            query = query + "FROM RECIPE ";
+            query = query + "WHERE RECIPE.RecipeName = '" + recipeName + "' ";
+
+            using (SqlConnection sqlConn = new SqlConnection(GetConnectionString()))
+            using (SqlCommand cmd = new SqlCommand(query, sqlConn))
+            {
+                sqlConn.Open();
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    type = (row["TextRecipe"].ToString());
+                }
+               
+            }
+            return type;
+        }
         public Boolean StoreRecipe( Recipe recipe)
         {
             Boolean success = false;
@@ -105,7 +129,7 @@ namespace KitchenAidTool
             //int recipeType = 0;
             //List<string> executionList = new List<string>();
 
-            //string RecipeID = "(SELECT RecipeID FROM RECIPE WHERE RecipeName = '" + recipe.getName() + "' ) )";
+           // string RecipeID = "(DELETE * FROM RECIPE WHERE RecipeName = '" + recipe.getName() + "' ) )";
 
             //if (recipe.CheckTextRecipe())
             //    recipeType = 1; //recipe is a TextRecipe 

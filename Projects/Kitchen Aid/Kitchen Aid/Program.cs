@@ -45,7 +45,7 @@ namespace KitchenAid
 
             //Testing TextRecipe 
             //TextRecipe smores = new TextRecipe( "Smores" ); 
-            DatabaseManager test = new DatabaseManager();
+           // DatabaseManager test = new DatabaseManager();
             //List<string> des = new List<string>();
             //des = test.RetrieveSteps("Smores");
             //des = test.RetrieveIngredients("Smores");
@@ -53,7 +53,7 @@ namespace KitchenAid
             //Boolean fail = test.StoreRecipe(smores);
 
             //Testing emergency contact 
-            test.StoreEmergencyContact("5415705748"); 
+            //test.StoreEmergencyContact("5415705748"); 
 
             //des.Clear(); 
 
@@ -82,7 +82,10 @@ namespace KitchenAid
 
             //int a = 0; 
 
-            
+            //testing pantry
+            RecipeManager test = new RecipeManager();
+            test.LoadRecipe("Smores"); 
+
         }
     }
 }

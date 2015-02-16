@@ -4,7 +4,7 @@
 --Delete  FROM Recipe Where RecipeID is Not NULL;
 
 --INSERT INTO Ingredients (IngredientDescription, RecipeID ) 
---VALUES ('1 Marshmallow', (SELECT RecipeID
+--VALUES ('2 Gram Crackers', (SELECT RecipeID
 --						           FROM Recipe
 --						           WHERE RecipeName = 'Smores') )
 
@@ -14,11 +14,11 @@
 --						                                                            WHERE RecipeName = 'Smores') )
 
 --INSERT INTO Materials (MaterialDescription, RecipeID ) 
---VALUES ('1 Plate', (SELECT RecipeID
+--VALUES ('1 Fork', (SELECT RecipeID
 --						           FROM Recipe
 --						           WHERE RecipeName = 'Smores') )
 
 --INSERT INTO Steps (StepDescription, StepIndex, RecipeID ) 
---VALUES ('Testing step 3', 3, (SELECT RecipeID
+--VALUES ('Testing step 1', 1, (SELECT RecipeID
 --						      FROM Recipe
 --						      WHERE RecipeName = 'Smores') )
