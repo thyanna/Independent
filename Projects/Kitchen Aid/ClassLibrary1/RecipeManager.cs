@@ -26,6 +26,11 @@ namespace KitchenAidTool
             return success; 
         }
 
+        public List<string> LoadRecipeList()
+        {
+            return m_database.RetrieveRecipeList(); 
+
+        }
         //Retrieve Recipe data from database  
         public List<List<string>> LoadRecipe(string recipeName)
         {
@@ -47,8 +52,9 @@ namespace KitchenAidTool
                 }
                 else //video recipe 
                 {
-                    //recipe path only requries one string, reusing type List<string> to store path
                     type.Add("Video");
+                    recipeData.Add(type);
+                    type.Clear(); 
                     type.Add(m_database.RetrieveVideoPath(recipeName)); 
                     recipeData.Add(type);
                 }

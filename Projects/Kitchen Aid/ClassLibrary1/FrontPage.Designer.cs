@@ -43,33 +43,37 @@
             this.StartCooking.TabIndex = 0;
             this.StartCooking.Text = "Start Cooking!";
             this.StartCooking.UseVisualStyleBackColor = true;
+            this.StartCooking.Click += new System.EventHandler(this.StartCooking_Click);
             // 
             // TextRecipe
             // 
             this.TextRecipe.Location = new System.Drawing.Point(23, 113);
             this.TextRecipe.Name = "TextRecipe";
-            this.TextRecipe.Size = new System.Drawing.Size(193, 35);
+            this.TextRecipe.Size = new System.Drawing.Size(199, 35);
             this.TextRecipe.TabIndex = 1;
             this.TextRecipe.Text = "Add Recipe with Text";
             this.TextRecipe.UseVisualStyleBackColor = true;
+            this.TextRecipe.Click += new System.EventHandler(this.TextRecipe_Click);
             // 
             // VideoRecipe
             // 
             this.VideoRecipe.Location = new System.Drawing.Point(23, 166);
             this.VideoRecipe.Name = "VideoRecipe";
-            this.VideoRecipe.Size = new System.Drawing.Size(193, 33);
+            this.VideoRecipe.Size = new System.Drawing.Size(199, 33);
             this.VideoRecipe.TabIndex = 2;
             this.VideoRecipe.Text = "Add Recipe with a Video";
             this.VideoRecipe.UseVisualStyleBackColor = true;
+            this.VideoRecipe.Click += new System.EventHandler(this.VideoRecipe_Click);
             // 
             // RemoveRecipe
             // 
             this.RemoveRecipe.Location = new System.Drawing.Point(23, 217);
             this.RemoveRecipe.Name = "RemoveRecipe";
-            this.RemoveRecipe.Size = new System.Drawing.Size(193, 32);
+            this.RemoveRecipe.Size = new System.Drawing.Size(199, 32);
             this.RemoveRecipe.TabIndex = 3;
             this.RemoveRecipe.Text = "Remove Recipe";
             this.RemoveRecipe.UseVisualStyleBackColor = true;
+            this.RemoveRecipe.Click += new System.EventHandler(this.RemoveRecipe_Click);
             // 
             // EmergencyContact
             // 
@@ -79,6 +83,7 @@
             this.EmergencyContact.TabIndex = 4;
             this.EmergencyContact.Text = "Set Emergency Contact";
             this.EmergencyContact.UseVisualStyleBackColor = true;
+            this.EmergencyContact.Click += new System.EventHandler(this.EmergencyContact_Click);
             // 
             // FrontPage
             // 
@@ -90,6 +95,7 @@
             this.Controls.Add(this.VideoRecipe);
             this.Controls.Add(this.TextRecipe);
             this.Controls.Add(this.StartCooking);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrontPage";
             this.Text = "Independence";
             this.Load += new System.EventHandler(this.FrontPage_Load);

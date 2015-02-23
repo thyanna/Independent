@@ -18,3 +18,7 @@ C:\Users\Chan\Documents\Senior Project\Independent\Projects\Kitchen Aid\Kitchen 
 C:\Users\Chan\Documents\Senior Project\Independent\Projects\Kitchen Aid\Kitchen Aid\obj\Debug\KitchenAid.csprojResolveAssemblyReference.cache
 C:\Users\Chan\Documents\Senior Project\Independent\Projects\Kitchen Aid\Kitchen Aid\obj\Debug\KitchenAid.Properties.Resources.resources
 C:\Users\Chan\Documents\Senior Project\Independent\Projects\Kitchen Aid\Kitchen Aid\obj\Debug\KitchenAid.csproj.GenerateResource.Cache
+C:\Users\Chan\Documents\Senior Project\Independent\Projects\Kitchen Aid\Kitchen Aid\bin\Debug\KitchenAidUI.dll
+C:\Users\Chan\Documents\Senior Project\Independent\Projects\Kitchen Aid\Kitchen Aid\bin\Debug\KitchenAidUI.pdb
+C:\Users\Chan\Documents\Senior Project\Independent\Projects\Kitchen Aid\Kitchen Aid\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Chan\Documents\Senior Project\Independent\Projects\Kitchen Aid\Kitchen Aid\bin\Debug\Interop.WMPLib.dll

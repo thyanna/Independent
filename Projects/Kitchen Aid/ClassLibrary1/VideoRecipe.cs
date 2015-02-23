@@ -16,7 +16,7 @@ namespace KitchenAidTool
         {
             return false; 
         }
-        public string getVideoPath()
+        public override string getVideoPath()
         {
             return mVideoPath; 
         }

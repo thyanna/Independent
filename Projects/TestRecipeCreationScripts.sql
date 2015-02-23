@@ -1,6 +1,6 @@
 ﻿--SELECT StepDescription, StepIndex
 --FROM RECIPE JOIN STEPS ON RECIPE.RecipeID = STEPS.RecipeID 
---WHERE RECIPE.RecipeName = 'Smores' 
+--WHERE RECIPE.RecipeName = 'Hot Cocoa' 
 --ORDER BY StepIndex
 
 --SELECT IngredientDescription
@@ -9,9 +9,6 @@
 --SELECT *
 --FROM Recipe
 
-SELECT TextRecipe
-FROM RECIPE
-WHERE RecipeName = 'Smores'
 
 --SELECT MaterialDescription
 --FROM RECIPE JOIN Materials ON Recipe.RecipeID = Materials.RecipeID 

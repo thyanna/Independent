@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using KitchenAidTool; 
+using KitchenAidUI; 
 
 namespace KitchenAid
 {
@@ -83,9 +83,10 @@ namespace KitchenAid
             //int a = 0; 
 
             //testing pantry
-            RecipeManager test = new RecipeManager();
-            test.LoadRecipe("Smores"); 
-
+            //RecipeManager test = new RecipeManager();
+            //test.LoadRecipe("Smores"); 
+            UIManager test = new UIManager();
+            test.LoadMainPage(); 
         }
     }
 }

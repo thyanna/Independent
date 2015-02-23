@@ -16,7 +16,7 @@ namespace KitchenAidTool
         {
             return true; 
         }
-        public List<string> getSteps()
+        public override List<string> getSteps()
         {
             return mSteps; 
         }

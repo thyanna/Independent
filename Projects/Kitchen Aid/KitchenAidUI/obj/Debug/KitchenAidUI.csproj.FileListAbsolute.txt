@@ -1,0 +1,9 @@
+C:\Users\Chan\Documents\Senior Project\Independent\Projects\Kitchen Aid\KitchenAidUI\obj\Debug\KitchenAidUI.csprojResolveAssemblyReference.cache
+C:\Users\Chan\Documents\Senior Project\Independent\Projects\Kitchen Aid\KitchenAidUI\bin\Debug\KitchenAidUI.dll
+C:\Users\Chan\Documents\Senior Project\Independent\Projects\Kitchen Aid\KitchenAidUI\bin\Debug\KitchenAidUI.pdb
+C:\Users\Chan\Documents\Senior Project\Independent\Projects\Kitchen Aid\KitchenAidUI\bin\Debug\KitchenAidTool.dll
+C:\Users\Chan\Documents\Senior Project\Independent\Projects\Kitchen Aid\KitchenAidUI\bin\Debug\KitchenAidTool.pdb
+C:\Users\Chan\Documents\Senior Project\Independent\Projects\Kitchen Aid\KitchenAidUI\obj\Debug\KitchenAidUI.dll
+C:\Users\Chan\Documents\Senior Project\Independent\Projects\Kitchen Aid\KitchenAidUI\obj\Debug\KitchenAidUI.pdb
+C:\Users\Chan\Documents\Senior Project\Independent\Projects\Kitchen Aid\KitchenAidUI\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Chan\Documents\Senior Project\Independent\Projects\Kitchen Aid\KitchenAidUI\bin\Debug\Interop.WMPLib.dll

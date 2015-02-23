@@ -8,9 +8,9 @@ namespace KitchenAidTool
 {
     public abstract class Recipe
     {
-        protected String mName = "";
-        protected List<String> mIngredients = new List<String>();
-        protected List<String> mMaterials = new List<String>();
+        protected string mName = "";
+        protected List<string> mIngredients = new List<string>();
+        protected List<string> mMaterials = new List<string>();
         protected int mTime = 0; 
 
         public Recipe( string name )

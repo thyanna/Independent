@@ -103,7 +103,27 @@ namespace KitchenAidTool
                 }
             }
         }
+        public List<string> RetrieveRecipeList()
+        {
+            List<string> recipeList = new List<string>();
 
+            string query = "SELECT RecipeName ";
+            query = query + "FROM RECIPE";
+
+            using (SqlConnection sqlConn = new SqlConnection(GetConnectionString()))
+            using (SqlCommand cmd = new SqlCommand(query, sqlConn))
+            {
+                sqlConn.Open();
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    recipeList.Add(row["RecipeName"].ToString());
+                }
+            }
+            return recipeList;
+        }
         public Boolean StoreEmergencyContact( string number )
         {
             Boolean success = false;
@@ -323,7 +343,7 @@ namespace KitchenAidTool
         }
         public string GetConnectionString() //Needs to be extended for modification 
         { return ("Data Source=(LocalDB)\\v11.0;Initial Catalog=KitchenAidDatabase;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False"); }
-
+        //Data Source=(LocalDB)\v11.0;AttachDbFilename="C:\Users\Chan\Documents\Senior Project\Independent\Projects\Kitchen Aid\Kitchen Aid\KitchenAidDatabase.mdf";Integrated Security=True;Connect Timeout=30
         
         public string RetrieveVideoPath(string recipeName)
         {

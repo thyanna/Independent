@@ -106,6 +106,10 @@
       <Project>{2b3d882d-fed1-41f6-85a9-c0ce6e93f413}</Project>
       <Name>KitchenAidTool</Name>
     </ProjectReference>
+    <ProjectReference Include="..\KitchenAidUI\KitchenAidUI.csproj">
+      <Project>{ccc5ba5a-893b-423a-a469-a518644d8944}</Project>
+      <Name>KitchenAidUI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
