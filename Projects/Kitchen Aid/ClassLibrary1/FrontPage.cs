@@ -41,12 +41,18 @@ namespace KitchenAidTool
 
         private void RemoveRecipe_Click(object sender, EventArgs e)
         {
-            Debug.WriteLine("Remove Recipe"); 
+            RecipeRemovalPage additionForm = new RecipeRemovalPage();
+            this.Hide();
+            additionForm.ShowDialog();
+            this.Show();
         }
 
         private void EmergencyContact_Click(object sender, EventArgs e)
         {
-            Debug.WriteLine("Emergency Contact"); 
+            EmergencyContactAlterationPage additionForm = new EmergencyContactAlterationPage();
+            this.Hide();
+            additionForm.ShowDialog();
+            this.Show();
         }
 
         private void StartCooking_Click(object sender, EventArgs e)

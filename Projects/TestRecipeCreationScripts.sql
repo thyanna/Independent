@@ -6,9 +6,15 @@
 --SELECT IngredientDescription
 --FROM RECIPE JOIN Ingredients ON Recipe.RecipeID = Ingredients.RecipeID 
 
---SELECT *
---FROM Recipe
+--INSERT INTO EmergencyContact (ContactNumber, EmergencyMessage )
+--values ('Default', 'Default Message')
 
+SELECT *
+FROM Recipe
+
+--SELECT ContactNumber, EmergencyMessage, EmergencyContactID
+--FROM EmergencyContact
+--WHERE EmergencyContactID = 2
 
 --SELECT MaterialDescription
 --FROM RECIPE JOIN Materials ON Recipe.RecipeID = Materials.RecipeID 

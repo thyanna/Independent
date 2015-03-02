@@ -29,7 +29,6 @@ namespace KitchenAidTool
         public List<string> LoadRecipeList()
         {
             return m_database.RetrieveRecipeList(); 
-
         }
         //Retrieve Recipe data from database  
         public List<List<string>> LoadRecipe(string recipeName)

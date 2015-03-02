@@ -43,12 +43,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseManager.cs" />
-    <Compile Include="EmergencyContact.cs" />
+    <Compile Include="EmergencyContactManager.cs" />
+    <Compile Include="EmergencyContactAlterationPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmergencyContactAlterationPage.Designer.cs">
+      <DependentUpon>EmergencyContactAlterationPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrontPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrontPage.Designer.cs">
       <DependentUpon>FrontPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="RecipeCompletionPage.cs">
       <SubType>Form</SubType>
@@ -59,6 +70,12 @@
     <Compile Include="RecipeManager.cs" />
     <Compile Include="Recipe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecipeRemovalPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecipeRemovalPage.Designer.cs">
+      <DependentUpon>RecipeRemovalPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="TextRecipe.cs" />
     <Compile Include="VideoRecipeAdditionPage.cs">
       <SubType>Form</SubType>
@@ -83,11 +100,21 @@
     <None Include="Properties\DataSources\VideoRecipe.datasource" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="EmergencyContactAlterationPage.resx">
+      <DependentUpon>EmergencyContactAlterationPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrontPage.resx">
       <DependentUpon>FrontPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="RecipeCompletionPage.resx">
       <DependentUpon>RecipeCompletionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecipeRemovalPage.resx">
+      <DependentUpon>RecipeRemovalPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VideoRecipeAdditionPage.resx">
       <DependentUpon>VideoRecipeAdditionPage.cs</DependentUpon>
@@ -114,6 +141,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

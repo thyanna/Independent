@@ -14,7 +14,7 @@ namespace KitchenAidTool
     {
         RecipeManager recipeManager = new RecipeManager();
         List<List<string>> selectedRecipe = new List<List<string>>();
-        EmergencyContact emergencyContact = new EmergencyContact(); 
+        EmergencyContactManager emergencyContact = new EmergencyContactManager(); 
         int stepIndex; 
 
         public RecipeCompletionPage()
@@ -117,9 +117,9 @@ namespace KitchenAidTool
 
         private void EmergencyContact_Click(object sender, EventArgs e)
         {
-            emergencyContact.InitiateEmergnecyContact();
+            emergencyContact.InitiateEmergencyContact();
             axWindowsMediaPlayer1.Ctlcontrols.stop(); 
-            RecipeCompleteText.Text = Environment.NewLine + Environment.NewLine + "Help is on its way! If there is a fire, get out of the house."; 
+            RecipeCompleteText.Text = Environment.NewLine + "Help is on its way! If there is a fire, get out of the house."; 
             RecipeCompleteText.Visible = true;
             RecipeCompleteText.BringToFront(); 
  
@@ -133,9 +133,14 @@ namespace KitchenAidTool
 
             //Creating link to watch the Window Media Player's state... is not working. 
           //  axWindowsMediaPlayer1.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(axWindowsMediaPlayer1_PlayStateChange);
-            axWindowsMediaPlayer1.URL = selectedRecipe[2][0];
+            axWindowsMediaPlayer1.URL = Environment.CurrentDirectory + "\\VideoFiles\\" + selectedRecipe[2][0];
             axWindowsMediaPlayer1.Ctlcontrols.play();
             EmergencyContact.Visible = true;
+        }
+
+        private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
+        {
+
         }
         //private void axWindowsMediaPlayer1_PlayStateChange( object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
         //{

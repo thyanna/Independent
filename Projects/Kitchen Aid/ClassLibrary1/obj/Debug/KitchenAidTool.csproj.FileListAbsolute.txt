@@ -18,3 +18,6 @@ C:\Users\Chan\Documents\Senior Project\Independent\Projects\Kitchen Aid\ClassLib
 C:\Users\Chan\Documents\Senior Project\Independent\Projects\Kitchen Aid\ClassLibrary1\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\Chan\Documents\Senior Project\Independent\Projects\Kitchen Aid\ClassLibrary1\obj\Debug\KitchenAidTool.csproj.ResolveComReference.cache
 C:\Users\Chan\Documents\Senior Project\Independent\Projects\Kitchen Aid\ClassLibrary1\obj\Debug\KitchenAidTool.VideoRecipeAdditionPage.resources
+C:\Users\Chan\Documents\Senior Project\Independent\Projects\Kitchen Aid\ClassLibrary1\obj\Debug\KitchenAidTool.Properties.Resources.resources
+C:\Users\Chan\Documents\Senior Project\Independent\Projects\Kitchen Aid\ClassLibrary1\obj\Debug\KitchenAidTool.RecipeRemovalPage.resources
+C:\Users\Chan\Documents\Senior Project\Independent\Projects\Kitchen Aid\ClassLibrary1\obj\Debug\KitchenAidTool.EmergencyContactAlterationPage.resources

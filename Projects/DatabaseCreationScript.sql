@@ -14,6 +14,10 @@ IF OBJECT_ID( 'Ingedients' ) IS NOT NULL
 DROP TABLE Ingredients
 
 GO
+IF OBJECT_ID( 'EmergencyContact' ) IS NOT NULL
+DROP TABLE EmergencyContact
+
+GO
 IF OBJECT_ID( 'Materials' ) IS NOT NULL
 DROP TABLE Materials
 
@@ -69,4 +73,13 @@ CREATE TABLE [dbo].[Videos]
 	VideoID int NOT NULL PRIMARY KEY IDENTITY,
 	VideoPath VARCHAR(MAX) NOT NULL,
 	RecipeID int REFERENCES Recipe( RecipeID ) 
+)
+
+GO
+CREATE TABLE [dbo].[EmergencyContact]
+(
+	EmergencyContactID int NOT NULL PRIMARY KEY IDENTITY,
+	ContactNumber VARCHAR(10) NOT NULL,
+	EmergencyMessage VARCHAR(MAX) NOT NULL,
+	firstIndex int NOT NULL
 )

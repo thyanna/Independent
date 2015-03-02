@@ -1,0 +1,1 @@
+In start up script or whatever, you need to make sure emergency contact has an entry in it's table (ID 2)
