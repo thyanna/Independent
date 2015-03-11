@@ -46,7 +46,7 @@
             // 
             // DataEntry
             // 
-            this.DataEntry.Location = new System.Drawing.Point(40, 140);
+            this.DataEntry.Location = new System.Drawing.Point(40, 172);
             this.DataEntry.Name = "DataEntry";
             this.DataEntry.Size = new System.Drawing.Size(392, 26);
             this.DataEntry.TabIndex = 1;
@@ -54,7 +54,7 @@
             // 
             // RecipeName
             // 
-            this.RecipeName.Location = new System.Drawing.Point(464, 140);
+            this.RecipeName.Location = new System.Drawing.Point(464, 165);
             this.RecipeName.Name = "RecipeName";
             this.RecipeName.Size = new System.Drawing.Size(159, 32);
             this.RecipeName.TabIndex = 2;
@@ -64,7 +64,7 @@
             // 
             // Material
             // 
-            this.Material.Location = new System.Drawing.Point(464, 140);
+            this.Material.Location = new System.Drawing.Point(464, 164);
             this.Material.Name = "Material";
             this.Material.Size = new System.Drawing.Size(159, 34);
             this.Material.TabIndex = 4;
@@ -86,7 +86,7 @@
             // 
             // ChooseFile
             // 
-            this.ChooseFile.Location = new System.Drawing.Point(464, 140);
+            this.ChooseFile.Location = new System.Drawing.Point(464, 166);
             this.ChooseFile.Name = "ChooseFile";
             this.ChooseFile.Size = new System.Drawing.Size(159, 32);
             this.ChooseFile.TabIndex = 6;
@@ -100,7 +100,7 @@
             this.InstructionsBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InstructionsBox.Location = new System.Drawing.Point(36, 13);
             this.InstructionsBox.Name = "InstructionsBox";
-            this.InstructionsBox.Size = new System.Drawing.Size(500, 69);
+            this.InstructionsBox.Size = new System.Drawing.Size(500, 127);
             this.InstructionsBox.TabIndex = 7;
             this.InstructionsBox.Text = "Type the recipe\'s name below, then hit enter. ";
             this.InstructionsBox.Click += new System.EventHandler(this.InstructionsBox_Click);
@@ -108,7 +108,7 @@
             // Qty
             // 
             this.Qty.AutoSize = true;
-            this.Qty.Location = new System.Drawing.Point(40, 116);
+            this.Qty.Location = new System.Drawing.Point(37, 140);
             this.Qty.Name = "Qty";
             this.Qty.Size = new System.Drawing.Size(33, 20);
             this.Qty.TabIndex = 8;
@@ -118,7 +118,7 @@
             // Unit
             // 
             this.Unit.AutoSize = true;
-            this.Unit.Location = new System.Drawing.Point(104, 116);
+            this.Unit.Location = new System.Drawing.Point(104, 146);
             this.Unit.Name = "Unit";
             this.Unit.Size = new System.Drawing.Size(38, 20);
             this.Unit.TabIndex = 9;
@@ -128,7 +128,7 @@
             // Description
             // 
             this.Description.AutoSize = true;
-            this.Description.Location = new System.Drawing.Point(171, 116);
+            this.Description.Location = new System.Drawing.Point(171, 146);
             this.Description.Name = "Description";
             this.Description.Size = new System.Drawing.Size(89, 20);
             this.Description.TabIndex = 10;
@@ -138,7 +138,7 @@
             // ListLabel
             // 
             this.ListLabel.AutoSize = true;
-            this.ListLabel.Location = new System.Drawing.Point(40, 169);
+            this.ListLabel.Location = new System.Drawing.Point(36, 204);
             this.ListLabel.Name = "ListLabel";
             this.ListLabel.Size = new System.Drawing.Size(102, 20);
             this.ListLabel.TabIndex = 11;
@@ -147,16 +147,16 @@
             // 
             // ListBox
             // 
-            this.ListBox.Location = new System.Drawing.Point(40, 192);
+            this.ListBox.Location = new System.Drawing.Point(40, 227);
             this.ListBox.Multiline = true;
             this.ListBox.Name = "ListBox";
-            this.ListBox.Size = new System.Drawing.Size(392, 176);
+            this.ListBox.Size = new System.Drawing.Size(392, 141);
             this.ListBox.TabIndex = 12;
             this.ListBox.Visible = false;
             // 
             // QtyBox
             // 
-            this.QtyBox.Location = new System.Drawing.Point(41, 140);
+            this.QtyBox.Location = new System.Drawing.Point(41, 172);
             this.QtyBox.Name = "QtyBox";
             this.QtyBox.Size = new System.Drawing.Size(47, 26);
             this.QtyBox.TabIndex = 13;
@@ -164,7 +164,7 @@
             // 
             // UnitBox
             // 
-            this.UnitBox.Location = new System.Drawing.Point(108, 140);
+            this.UnitBox.Location = new System.Drawing.Point(108, 172);
             this.UnitBox.Name = "UnitBox";
             this.UnitBox.Size = new System.Drawing.Size(47, 26);
             this.UnitBox.TabIndex = 14;
@@ -172,7 +172,7 @@
             // 
             // DescriptionBox
             // 
-            this.DescriptionBox.Location = new System.Drawing.Point(175, 140);
+            this.DescriptionBox.Location = new System.Drawing.Point(175, 172);
             this.DescriptionBox.Name = "DescriptionBox";
             this.DescriptionBox.Size = new System.Drawing.Size(257, 26);
             this.DescriptionBox.TabIndex = 15;
