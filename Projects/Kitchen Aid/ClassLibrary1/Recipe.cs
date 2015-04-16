@@ -35,6 +35,7 @@ namespace KitchenAidTool
         public virtual List<string> getSteps()
         {
             List<string> temp = new List<string>();
+
             temp.Add("Error:Recipe type not declared.");
             return temp; 
         }

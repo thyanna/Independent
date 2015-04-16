@@ -131,8 +131,6 @@ namespace KitchenAidTool
             PlayVideo.Visible = false;
             EmergencyContact.Visible = false;
 
-            //Creating link to watch the Window Media Player's state... is not working. 
-          //  axWindowsMediaPlayer1.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(axWindowsMediaPlayer1_PlayStateChange);
             axWindowsMediaPlayer1.URL = Environment.CurrentDirectory + "\\VideoFiles\\" + selectedRecipe[2][0];
             axWindowsMediaPlayer1.Ctlcontrols.play();
             EmergencyContact.Visible = true;
